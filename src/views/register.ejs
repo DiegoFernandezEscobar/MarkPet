@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include("./partials/head") %>
+  <!-- fin head -->          
+  <style>.container {padding-right: 20px;padding-left: 20px;}</style>
+
+  
+<!--  Body -->
+<body>
+  <!--   header fin -->
+  <%- include("./partials/header") %>
+  <!--   Header fin  -->
+<!-- Jumbotron -
+<div class="banner">
+  <div class="container">
+    <div>
+        <h1>Registrate</h1>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron fin  -->
+
+<!-- seccion Product -->
+
+
+  <!--<style>.container {padding-right: 20px;padding-left: 20px;}</style>
+  
+  
+    <!-- Body Start-->
+    <body class="body-registro">
+    
+      <div class="body-registro1">
+            
+      <form action="/register/user" method="POST" enctype="multipart/form-data">
+        <div class="registro-contenedor">
+
+        <div class="registro-contenedor2">  
+            
+            
+            <div class="registro-nombre">
+                <div class="registro-titulo">
+                  <h2 class='login-titulo'>M<span class="login-span">arkPet</span></h2>
+    
+                  <h2 class='login-titulo'>R<span class="login-span">egistrate</span></h2>
+                </div>
+        
+                
+                <div>
+                
+                
+                <label for='firstName' class="label-registro">Nombre Completo:</label>
+                <input class="<%= locals.errors && errors.firstName ? 'invalido' : 'input-registro' %>" 
+                type="text" 
+                name="firstName" 
+                value="<%= locals.oldData ? oldData.firstName : null %>"
+                placeholder="Nombre"
+                id="firstName"
+                >
+                <%if (locals.errors && errors.firstName){%>
+                    <div class="alarm">
+                      <%=errors.firstName.msg%>
+                    </div>
+                  <%}%>
+
+                <label for='lastName' class="label-registro">Apellido:</label>
+                <input 
+                class="<%= locals.errors && errors.lastName ? 'invalido' : 'input-registro' %>"
+                type="text" 
+                for="lastName" 
+                name="lastName" 
+                id="lastName" 
+                value="<%= locals.oldData ? oldData.lastName : null %>"
+                placeholder="Apellido">
+                <%if (locals.errors && errors.lastName){%>
+                    <div class="alarm">
+                      <%=errors.lastName.msg%>
+                    </div>
+                  <%}%>
+
+                <label for="phone" class="label-registro">Telefono/Celular:</label>
+                <input 
+                class="input-registro" 
+                type="number"
+                placeholder=""
+                name="phone"
+                for="phone">
+
+                <label for="adress" class="label-registro">Dirección:</label>
+                <input 
+                class="input-registro" 
+                type="text" 
+                placeholder="Dirección"
+                name="adress"
+                for="adress"
+                >
+                </div>
+            </div>
+
+
+            <div class="registro-correo">
+                <div>
+                    <div class="circular--landscape">
+                        <img src="/images/users/registroo.jpg"
+                        onclick="document.getElementById('avatar').click();" />
+                    </div>
+                    <input type="file" name="avatar" id="avatar" style="display:none;"> <br>
+                    
+                    <input
+                    type="button"
+                    class="btn-submit"
+                    value="Cargar Foto de Perfil"
+                    onclick="document.getElementById('avatar').click();"/>
+                </div>
+
+
+                <label for='email' class="label-registro"> Ingrese su Correo-Electronico:</label>
+                <input class="<%= locals.errors && errors.email ? 'invalido' : 'input-registro' %>"
+                id="email"
+                type="text" 
+                for="email" 
+                name="email" 
+                value="<%= locals.oldData ? oldData.email : null %>"
+                placeholder="ejemplo@gmail.com">
+                <%if (locals.errors && errors.email){%>
+                    <div class="alarm">
+                      <%=errors.email.msg%>
+                    </div>
+                  <%}%>
+
+
+                <label for='password' class="label-registro">Contraseña:</label>   
+                <input 
+                class="<%= locals.errors && errors.password ? 'invalido' : 'input-registro' %>"
+                type="password" 
+                name="password" 
+                id="password" 
+                value="<%= locals.oldData ? oldData.password : null %>"
+                placeholder="Contraseña">
+                <%if (locals.errors && errors.password){%>
+                    <div class="alarm">
+                      <%=errors.password.msg%>
+                    </div>
+                  <%}%>
+
+                <label for="passwordconfirm" class="label-registro">Confirmar Contraseña: </label>    
+                <input class="input-registro" 
+                type="password" 
+                id="passwordconfirm"  
+                name="passwordconfirm"
+                value="<%= locals.oldData ? oldData.passwordconfirm : null %>"
+                
+                placeholder="">
+                <%if (locals.errors && errors.passwordconfirm){%>
+                  <div class="alarm">
+                    <%=errors.passwordconfirm.msg%>
+                  </div>
+                <%}%>
+                
+                
+            </div>
+            
+
+            
+        </div>
+        <div class="contenedor-btn-registrarser">
+        <input type="submit" class="btn-registrarser" value="Registrarse">
+        </div>
+        </div>
+        
+    </form>
+    </div>
+    
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/b1ee9d91d2.js" crossorigin="anonymous"></script>
+    <script src="/js/valdaciondeformulario.js"></script>
+    
+    
+    
+    
+    
+    
+    
+
+   
+
+<!-- termina seccion contacto -->
+   
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- js -->
+    <script src="/js/animate.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+
+    </body>
+  <!-- termina Body  -->
+</html>

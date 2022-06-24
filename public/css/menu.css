@@ -1,0 +1,543 @@
+header{
+    margin-bottom: -20px;
+}
+/* Seccion del logo */
+
+.barra-administrador{
+    background-color: rgb(90, 87, 87) ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-administrador a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+
+}
+
+.barra-administrador-sub{
+    
+    width: 25%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.barra-administrador .barra-administrador-sub:hover{
+    background-color: orange;
+}
+
+.contenedor-logo-administrador{
+    display: flex;
+    justify-content:space-between;
+    background:black;
+    padding: 10px;
+
+}
+
+.logo-administrador{
+    font-size: 50px;
+    font-weight: normal;
+    display: flex;
+}
+
+.logo-administrador a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.Administrador-color{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.contenedor-logo-administrador .cuenta-carrito a{
+    margin: 15px;
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+}
+
+.contenedor-logo-administrador .cuenta-carrito .casa:hover{
+    color: orange;
+    border-bottom: 4px solid orange;
+}
+
+
+/* Usuario */
+
+.contenedor-logo{
+    display: flex;
+    justify-content:space-between;
+    background: white;
+    padding: 10px;
+
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: normal;
+    display: flex;
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.logo-administrador a{
+    text-decoration: none;
+    color:white;
+
+}
+
+.pet{
+    color: orange;
+}
+
+.contenedor-logo .cuenta-carrito a{
+    margin: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.contenedor-logo .cuenta-carrito .ingresar:hover{
+    color: orange;
+    border-bottom: 4px solid orange;
+}
+
+.contenedor-logo .cuenta-carrito .registro:hover{
+    color: orange;
+    border-bottom: 4px solid orange;
+}
+.contenedor-logo .cuenta-carrito .carrito:hover,.casa:hover{
+    color: orange;}
+
+.contenedor-logo .cuenta-carrito .casa:hover{
+        color: orange;}
+
+
+.cuenta-carrito{
+    display: flex;
+    align-items: center;
+}
+
+/* seeccion del menu */
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    margin:auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+main article{
+    background:rgb(44, 7, 7) ;
+    margin: 20px 0;
+    padding: 20px ;
+    height: 1000px;
+}
+
+/* enlaces del nav */
+.menu{
+    background:rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.menu-administrador{
+    background:white;
+    margin-bottom: 20px;
+}
+
+.menu .contenedor-botones-menu{
+    /* display: flex; */
+    display: none;
+    justify-content: space-between;
+}
+.menu .contenedor-botones-menu button{
+    font-size: 20px;
+    color:orange;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+}
+
+.menu .contenedor-botones-menu button:hover{
+    background: orange;
+}
+.menu .contenedor-botones-menu .btn-menu-cerrar{
+    display: none;
+}
+.menu .contenedor-botones-menu .btn-menu-cerrar.activo{
+    display: inline-block;
+}
+
+.menu .contenedor-enlaces-nav {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .btn-mascotas{
+    color:white;
+    padding: 15px;
+    display: flex;
+    font-size: 18px;
+}
+
+.menu .btn-mascotas i{
+    margin-left: 15px;
+}
+
+.menu .btn-mascotas:hover{
+    background:orange;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.menu-administrador{
+    border-bottom: solid 1px black;
+}
+.menu-administrador .btn-mascotas:hover a{
+    
+    color: white;
+}
+
+.menu .btn-servicios,.ofertas,.shop,.nosotros{
+    color:white;
+    padding: 15px;
+    display: flex;
+    font-size: 18px;
+    
+}
+
+.menu .ofertas i{
+    margin-right: 15px;
+    display: flex;
+    align-items:center;
+}
+
+.menu-administrador .contenedor-enlaces-nav .ofertas:hover,.nosotros:hover,.shop:hover,.btn-servicios:hover{
+    background:orange ;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+
+.menu-administrador .contenedor-enlaces-nav a:hover{
+    color: white;
+}
+
+.menu .contenedor-enlaces-nav .ofertas:hover,.nosotros:hover,.shop:hover,.btn-servicios:hover{
+    background:orange ;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.menu .contenedor-enlaces-nav .btn-mascotas,.nosotros,.btn-servicios,.ofertas,.shop{
+    padding: 20px;
+
+}
+
+.menu .contenedor-enlaces-nav a{
+    color: white;
+}
+
+.menu-administrador .contenedor-enlaces-nav a{
+    color: black;
+}
+
+
+
+.menu .contenedor-enlaces-nav .btn-servicios,.btn-mascotas{
+    padding: 20px;
+}
+
+.menu .contenedor-enlaces-nav .btn-servicios a,.btn-mascotas a{
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+/* Grid */
+
+.contenedor-grid{
+    position: relative;
+}
+
+.grid{
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "categorias subcategorias subcategorias subcategorias";
+}
+
+.grid.activo{
+    display: grid;
+}
+
+.grid > div{
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(0,0,0,.30);
+}
+
+.grid .btn-regresar{
+    background: none;
+    color: orange;
+    border:none;
+    padding: 10px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.grid .categorias{
+    grid-area: categorias;
+    padding-top: 10px;
+    min-height: 300px;
+}
+
+.grid .categorias .subtitulo{
+    display: none;
+}
+
+.grid .categorias a{
+    color: #000;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.grid .categorias a i{
+    display: none;
+}
+
+.grid .categorias a:hover{
+    color: orange;
+    font-weight: bold ;
+}
+
+.grid .categorias a:hover i{
+    display:inline-block;
+}
+
+.grid .contenedor-subcategorias{
+    grid-area: subcategorias;
+
+
+}
+
+.grid .subcategoria {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+.grid .subcategoria.activo{
+    display: grid;
+}
+
+.grid .subcategoria img{
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid .enlaces-subcategorias{
+    padding-top:10px ;
+    height: 100%;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.grid .enlaces-subcategorias a{
+    color: #000;
+    font-size: 14px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid .enlaces-subcategorias a i{
+    display:none;
+}
+
+.grid .enlaces-subcategorias a:hover{
+    color:orange;
+}
+
+.grid .enlaces-subcategorias a:hover i{
+    display: inline-block ;
+}
+
+.grid .subtitulo{
+    font-size: 18px;
+    font-weight: normal;
+    color: orange;
+    padding: 10px 20px;
+}
+
+.grid .banner-subcategoria a{
+    display: block;
+    height: 100%;
+
+}
+
+.grid .galeria-subcategoria {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start; 
+
+}
+
+.grid .galeria-subcategoria a{
+
+    width: 50%;
+    height: 50%;
+
+}
+
+
+/* media querys */
+
+@media(max-width:475px){
+    .contenedor-logo{
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        padding: 10px;
+    }
+.logo-administrador{
+    flex-direction: column;
+    justify-content: center;
+}
+    .contenedor-logo-administrador{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+@media (max-width:760px) {
+    .menu .contenedor{
+        width:90%;
+    }
+    
+    .menu .contenedor-botones-menu{
+        display: flex;
+    
+    }
+
+    .menu .contenedor-enlaces-nav{
+        padding:20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        left: 0;
+        background: #000;
+        width: 80%;
+        margin-left: 0;
+        z-index: 2000;
+        transition: .3s ease all;
+        transform: translate(-100%);
+        overflow: auto;
+    }
+
+    .menu .contenedor-enlaces-nav.activo{
+        transform: translate(0%);
+    }
+    .menu .btn-mascotas,.btn-servicios,.ofertas,.nosotros{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .menu .btn-mascotas i,.btn-servicios i{
+        transform: rotate(-90deg);
+    }
+
+    .grid{
+        display: grid;
+        transition: .3s ease all;
+        transform: translate(-100%); 
+        z-index: 3000;
+        width: 80%;
+        position: fixed;
+        top:0;
+        left: 0;
+        height: 100vh;
+        grid-template-areas: 'categorias categorias categorias categorias';
+    }
+
+    .grid.activo{
+        transform: translate(0%);
+    }
+
+    .grid .btn-regresar{
+        display: inline-block;
+    }
+
+    .grid .categorias .subtitulo{
+        display: block;
+    }
+
+
+    .grid .contenedor-subcategorias{
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        transform:translateX(-100%); 
+        overflow: auto;
+
+    }
+    .grid .contenedor-subcategorias.activo{
+        transform:translateX(0);
+    }
+
+    .grid .contenedor-subcategorias .subcategoria{
+        grid-template-columns: 1fr;
+    }
+
+    .grid .contenedor-subcategorias .banner-subcategoria{
+        width: 100%;
+        min-height: 250px;
+        max-height: 300px;
+    }
+
+    .grid .contenedor-subcategorias .enlaces-subcategorias{
+        min-height: 50vh;
+        overflow: auto;
+    }
+    .grid .contenedor-subcategorias .galeria-subcategoria a{
+        width: 25%;
+        height: 100%;
+    }
+
+}

@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box ;
+}
+
+.invalido{
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border: red solid 2px ;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+
+    
+}
+
+.alarm{
+    color: red;
+}
+
+.login-password{
+    
+    background: url(../images/login.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.login-password .login-contenedor h2{
+    text-align: center;
+}
+
+.login-contenedor{
+    background: rgba(0, 0, 0, 0.8);
+    width: 300px;
+    border-radius: 8px;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+.login-titulo{
+    
+    color: orange;
+
+}
+
+.login-titulo2{
+    
+    color: orange;
+    margin-bottom: 30px;
+    border-bottom: solid 2px orange;
+    padding-top: 5px;
+    padding-bottom: 15px;
+
+}
+
+.login-span{
+    color: white;
+}
+
+.btn-ingresar{
+    margin-top: 20px;
+    color: white;
+    background-color: orange;
+    width: 70%;
+    border:none;
+    cursor: pointer;
+    height: 35px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.btn-ingresar:hover{
+    background: rgb(1, 168, 23);
+}
+
+.input-perfil-contraseña::placeholder{color: white;}
+
+
+.input-perfil-contraseña{
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-bottom: orange solid 5px ;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+
+
+}
+
+
+
+.llave{
+    color:orange;
+    background: rgba(145, 143, 143, 0.4);
+    padding: 12px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.perfil-login{
+    color:orange;
+    background: rgba(145, 143, 143, 0.4);
+    padding: 12px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.icon{   
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.label-perfil-contraseña{
+    color: rgb(235, 235, 235);
+}
+
+.registrate-login a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.home-login a{
+    text-decoration: none;
+    color: white;
+
+}
+
+
+
+.registrate-login{
+    margin-top: 20px;
+    text-align: center;
+    border-top: solid orange 2px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+
+}
+
+.home-login{
+    
+    text-align: center;
+    border-bottom: orange solid 2px;
+    padding-bottom: 20px;
+    
+
+}
+
+.registrate-login a:hover{
+    text-decoration: underline;
+}
+
+.home-login a:hover{
+    text-decoration: underline;
+}
+
+.home-login i{
+    color: orange;
+    padding-right: 10px;
+}
+
+.registrate-login i{
+    color: orange;
+    padding: 10px;
+}
+
+div.form-remember{
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(252, 252, 252)
+  }
+  
+  div.form-remember .rem-check{
+    margin-left: 25px;
+  }

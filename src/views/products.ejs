@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head Start-->
+  <%- include("./partials/head") %>
+<!-- Head End-->
+  <style>.container {padding-right: 20px;padding-left: 20px;}</style>
+
+  
+<!-- Body Start-->
+<body>
+  <!-- Header Start-->
+  <%- include("./partials/header") %>
+  <!-- Header End-->
+<!-- Jumbotron -->
+<div class="banner">
+  <div class="container">
+    <div>
+        <h1>Shop</h1>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron End -->
+<!-- prueba de codigo prestado -->
+
+<main>
+  <section class="last-visit">
+      <h3>Basado en tu última visita</h3>
+      <div class="productos">
+        <% products.forEach(function(product){%>
+        <article class="sombra-articulos">
+          <div class="tamaño-imagen">
+          <a href="/products/<%=product.id%>"><img src="/images/productos/<%=product.imagen%>" class="product_img" alt="Responsive image"></a> 
+        </div>  
+          <div class="main-article">
+                <i class="fas fa-truck"></i>
+               <p class="price"><span><%=product.price%></span> Only</p>
+                <p class="discount"><%=product.discount%></p>
+                <h3 class="description"><a href="productDetail"><%=product.name%></a></h3>
+                <p class="description"><%=product.description %></p>
+            </div>
+          </article>
+          <%})%>
+        </div> 
+  </section>
+</main>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+   <div class="row">
+    <div class="inner-content">
+     <div class="col-sm-6"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+      <h2 class="left">Contacto</h2>
+       <form action="https://formspree.io/f/xeqnvjzr"
+       method="POST">
+       <div class="row">
+         <div class="col-sm-6 form-group">
+           <input class="form-control" name="nombre" placeholder="Nombre" type="text" required>
+         </div>
+         <div class="col-sm-6 form-group">
+           <input class="form-control" name="_replyto" placeholder="Email" type="email" required>
+         </div>
+       </div>
+       <textarea class="form-control" name="message" placeholder="Comentario" rows="8"></textarea><br>
+       <div class="row">
+         <div class="col-sm-12 form-group">
+           <button class="btn btn-default pull-left" type="submit">Enviar</button>
+         </div>
+       </div> 
+       </form>
+     </div>
+     <div class="col-sm-5 address"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+       <h2>¿Como podemos ayudarte?</h2>
+       <p>Dejanos tu duda o inquietud y a la brevedad nuestro equipo la procesara y te brindara una solucion via E-mail <br> Atentamente Grupo 4</p>
+       <ul class="social-icon">
+          <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+       </ul>
+     </div>
+   </div>
+   </div>
+     </div>
+ 
+     <!--footer-->
+  <%- include("./partials/footer") %>
+  <!--footer end-->
+  >
+</section>
+<!-- Contact Section End -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- js -->
+<script src="/js/animate.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/menu.js"></script>
+</body>
+<!-- Body Ended -->
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include("./partials/head") %>
+  <!-- fin head -->          
+  <style>.container {padding-right: 20px;padding-left: 20px;}</style>
+
+  
+<!--  Body -->
+<body>
+  <!--   header fin -->
+  <%- include("./partials/header") %>
+  <!--   Header fin  -->
+<!-- Jumbotron -
+<div class="banner">
+  <div class="container">
+    <div>
+        <h1>Registrate</h1>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron fin  -->
+
+<!-- seccion Product -->
+
+
+  <!--<style>.container {padding-right: 20px;padding-left: 20px;}</style>
+  
+  
+    <!-- Body Start-->
+    <body >
+    
+        
+            
+      <div class="login-password">
+    
+          <div class="login-contenedor">
+              
+    
+              
+              <h2 class='login-titulo'>M<span class="login-span">arkPet</span></h2>
+    
+              <h2 class='login-titulo2'>B<span class="login-span">ienvenido!!</span></h2>
+              
+    
+              <form action="/login/users" method="POST">
+    
+                  <label for="email" class="label-perfil-contraseña" >Ingrese su E-mail:</label><br>
+                  
+                  <div class="icon"> 
+                      <div class="perfil-login">
+                          <i class="fa-solid fa-user"></i>
+                      </div>    
+                  
+                      <input 
+                      class="<%= locals.errors && errors.email ? 'invalido' : 'input-perfil-contraseña' %>"
+                      type="text" 
+                      for="email" 
+                      name="email"
+                      value="<%= locals.old ? old.email : null %>" 
+                      placeholder="E-mail">
+                  </div>
+                  <%if (locals.errors && errors.email){%>
+
+                    <div class="alarm">
+                      <%=errors.email.msg%>
+                    </div>
+                  <%}%>
+
+                    
+                  
+
+                  
+    
+    
+    
+                  <label for='password' class="label-perfil-contraseña" >Ingrese su Contraseña:</label><br>
+                  
+                  
+                  <div class="icon"> 
+                      <div class= llave>
+                          <i class="fa-solid fa-key "></i>
+                      </div>    
+                  
+                      <input class='input-perfil-contraseña '  type="password" name="password" id="password" placeholder="Contraseña">
+                  </div>
+
+                  <%if (locals.errors && errors.password){%>
+
+                    <div class="alarm">
+                      <%=errors.password.msg%>
+                    </div>
+                  <%}%>
+          
+                  <input type="submit" class="btn-ingresar" value="Ingresar">
+                  <div class="form-remember">
+                    <label for="remember" class="remember">Recordame </label>
+                    <div class="rem-check">
+                        <input  class="rem-check"type="checkbox" name="remember" id="remember">
+                    </div>
+                </div>
+    
+              </form>
+    
+              
+                  <div class="registrate-login"><a href="/register"><i class="fa-solid fa-user"></i>¿No tienes cuenta? Registrate</a></div> 
+              
+                  <div class="home-login"><a href="/"><i class="fa-solid fa-house-chimney"></i>Volver al Home</a></div>
+                  
+    
+              
+    
+    
+          </div>
+    
+      </div>
+    
+    
+    
+    <script src="https://kit.fontawesome.com/b1ee9d91d2.js" crossorigin="anonymous"></script>
+</section>
+
+<!-- termina seccion contacto -->
+   
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- js -->
+    <script src="/js/animate.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+
+    </body>
+  <!-- termina Body  -->
+</html>

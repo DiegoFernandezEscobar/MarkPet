@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box ;
+}
+
+
+
+.contenedor-inventario{
+    display: flex;
+    flex-direction: column;
+    /* border: blue solid 2px; */
+    align-items: center;
+    background: url(../images/inventario.jpg);
+    background-size: cover;
+    height: 100vh;
+
+    
+}
+
+.contenedor-inventario1{
+    justify-content: center;
+    align-items: center;
+    /* border: springgreen solid 2px; */
+    height: 75%;
+    width: 90%;
+    
+    margin: auto 0;
+    
+    
+}
+
+.contenedor-iventario2{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    background-color:rgba(255, 166, 0, 0.911);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.contenedor-iventario3{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    
+    
+    
+
+}
+
+
+.barrainventario{
+    overflow: auto;
+    
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.911);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.inventario-categoria{
+    /* border:  black solid 2px; */
+    color: white;
+    width: 14.28571428571429%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+
+.inventario-subcategoria{
+    color: white;
+    width: 14.28571428571429%;
+    height: 80px;
+    display: flex;
+    border-top: solid orange 1px;
+    
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;   
+}
+
+.inventario-editar{
+    color: white;
+    width: 14.28571428571429%;
+    height: 80px;
+    display: flex;
+    border-top: solid orange 1px;
+    
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;   
+}
+
+
+.inventario-editar a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(15, 231, 26);
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+
+.inventario-borrar{
+    color: white;
+    width: 14.28571428571429%;
+    height: 80px;
+    display: flex;
+    border-top: solid orange 1px;
+    
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;   
+}
+
+.inventario-borrar a{
+    text-decoration: none;
+    color: white;
+    background-color:red;
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+.contenedor-inventario2{
+    display: block;
+    flex-direction: column;
+    margin-right: 1px;
+    gap: 1rem;
+
+}
+.barrainventario{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 5rem;
+}

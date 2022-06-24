@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Inicio del head -->
+
+<%- include("./partials/head") %>
+
+    <!-- Fin del head -->
+
+    <body class="body222">
+    <!-- Inicio del Header -->
+    
+    <%- include("./partials/header") %>
+    
+    <!-- Fin del Header -->
+    
+        <form class="form3" action="/products" method="POST" enctype="multipart/form-data">
+            <div class="form-header">
+                <h2 class='form-title'>C<span class="span2">reacion de Producto</span></h2>
+            </div>
+            
+            <div class='contenedor11'>
+                <div class="class1">
+                
+                    <img class="imagen" src="/images/blog-img1-(4).jpg" alt="">
+
+                    <input class="form-input" type="file" name="image" id="image" style="display:none;"> <br>
+
+                    <input
+                    type="button"
+                    class="btn-imagenn"
+                    value="CARGAR IMAGEN"
+                    onclick="document.getElementById('image').click();"
+                  />
+                </div>
+                
+                
+                <div class="class">
+                    
+                    
+                    <label for='name' class="form-label" >Nombre del producto:</label>
+                    <input 
+                    class="<%= locals.errors && errors.name ? 'invalido' : 'form-input' %>"
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Ej:Collar para perro"><br>
+                    <%if (locals.errors && errors.name){%>
+                        <div class="alarm">
+                          <%=errors.name.msg%>
+                        </div>
+                      <%}%>
+
+                    <label for="description" class="form-label">Descripcion</label>
+                    <textarea name="description" id="description" class="<%= locals.errors && errors.description ? 'invalido' : 'form-input' %>"></textarea>
+                    <%if (locals.errors && errors.description){%>
+                        <div class="alarm">
+                          <%=errors.description.msg%>
+                        </div>
+                      <%}%>
+            
+                    <label for="price" class="form-label" >Precio del Producto:</label>
+                    <input 
+                    class="<%= locals.errors && errors.price ? 'invalido' : 'form-input' %>" 
+                    type="number" 
+                    name="price" 
+                    id="price" 
+                    placeholder="Ej:$350"><br>
+                    <%if (locals.errors && errors.price){%>
+                        <div class="alarm">
+                          <%=errors.price.msg%>
+                        </div>
+                      <%}%>
+                    
+                    
+                    
+                    <div class="contenedor2">
+                        <div class="stock">
+                            <label for="stock" class="form-label" >Stock:</label>
+                            <input 
+                            class="<%= locals.errors && errors.stock ? 'invalido' : 'form-input' %>" 
+                            type="number" 
+                            name="stock" 
+                            id="stock" 
+                            placeholder="Ej:120">
+                            <%if (locals.errors && errors.stock){%>
+                                <div class="alarm">
+                                  <%=errors.stock.msg%>
+                                </div>
+                              <%}%>
+                        </div>
+                        <div>
+                            <label for="discount" class="form-label" >Descuento:</label>
+                            <input class="form-input" type="number" name="discount" id="discount" placeholder="Ej:%15"><br>
+                        </div>
+                    </div>
+                    <label for="category" class="form-label">Categoría de Mascotas:</label>
+                    <select name="category"  class="<%= locals.errors && errors.category ? 'invalido' : 'form-input' %>" >
+                        <option value="">Elegí</option>
+                        <%mascota.forEach(function(category){%>
+                        <option value="<%=category.id%>"><%=category.nameMascota%></option>
+                        <%})%>
+                        </select> 
+                        <%if (locals.errors && errors.category){%>
+                            <div class="alarm">
+                              <%=errors.category.msg%>
+                            </div>
+                          <%}%>
+
+                        <label for="category1" class="form-label">Categoría de Producto:</label>
+                        <select name="category1"  class="<%= locals.errors && errors.category ? 'invalido' : 'form-input' %>">
+                            <option value="">Elegí</option>
+                            <%product.forEach(function(category){%>
+                            <option value="<%=category.id%>"><%=category.nameProduct%></option>
+                            <%})%>
+                            </select> 
+                            <%if (locals.errors && errors.category1){%>
+                                <div class="alarm">
+                                  <%=errors.category1.msg%>
+                                </div>
+                              <%}%>
+                </div>
+                    
+
+
+                
+
+            </div>
+
+            <div class="submit-guardar2">
+
+        
+                <input type="submit" class="btn-submit-guardar" value="Guardar Producto">
+
+              </div>
+            
+        </form>
+
+</body>
+</html>

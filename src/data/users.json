@@ -1,0 +1,249 @@
+[
+ {
+  "id": 1,
+  "first_name": "Shannah",
+  "last_name": "Winchcomb",
+  "email": "swinchcomb0@fastcompany.com",
+  "address": "109 Briar Crest Trail",
+  "phone": "5874766179",
+  "password": "PSlvFgDuN",
+  "image": "user_1.jpg",
+  "category": "user"
+ },
+ {
+  "id": 2,
+  "first_name": "Bearnard",
+  "last_name": "Bootell",
+  "email": "bbootell1@wikia.com",
+  "address": "997 Oxford Parkway",
+  "phone": "2431347996",
+  "password": "eFVYozyzRa",
+  "image": "user_2.jpg",
+  "category": "user"
+ },
+ {
+  "id": 3,
+  "first_name": "Dena",
+  "last_name": "Murfill",
+  "email": "dmurfill2@imdb.com",
+  "address": "82287 Northwestern Drive",
+  "phone": "6255767485",
+  "password": "l5CgQ8LdlK",
+  "image": "user_3.jpg",
+  "category": "user"
+ },
+ {
+  "id": 4,
+  "first_name": "Vanya",
+  "last_name": "Wildgoose",
+  "email": "vwildgoose3@google.ru",
+  "address": "316 Tennyson Street",
+  "phone": "3271650555",
+  "password": "Fqu0HF1rA27R",
+  "image": "user_4.jpg",
+  "category": "user"
+ },
+ {
+  "id": 5,
+  "first_name": "Carola",
+  "last_name": "Fone",
+  "email": "cfone4@goodreads.com",
+  "address": "872 Ridgeway Park",
+  "phone": "4912571051",
+  "password": "y1YMsS8GoRI",
+  "image": "user_5.jpg",
+  "category": "user"
+ },
+ {
+  "id": 6,
+  "first_name": "Jeniece",
+  "last_name": "Southwood",
+  "email": "jsouthwood5@nydailynews.com",
+  "address": "64980 Melby Court",
+  "phone": "3012032599",
+  "password": "dOUqLb5",
+  "image": "user_6.jpg",
+  "category": "user"
+ },
+ {
+  "id": 7,
+  "first_name": "Rhoda",
+  "last_name": "Gullberg",
+  "email": "rgullberg6@senate.gov",
+  "address": "11415 Longview Way",
+  "phone": "8993834559",
+  "password": "LLh9pVRPTc",
+  "image": "user_7.jpg",
+  "category": "user"
+ },
+ {
+  "id": 8,
+  "first_name": "Clerissa",
+  "last_name": "McMurthy",
+  "email": "cmcmurthy7@instagram.com",
+  "address": "666 Elgar Plaza",
+  "phone": "1011030960",
+  "password": "B5V4zyXbN0A",
+  "image": "user_8.jpg",
+  "category": "user"
+ },
+ {
+  "id": 9,
+  "first_name": "Kara",
+  "last_name": "Ownsworth",
+  "email": "kownsworth8@mozilla.org",
+  "address": "21 Monica Street",
+  "phone": "3049619236",
+  "password": "WRhDMRdfYdQ",
+  "image": "user_9.jpg",
+  "category": "user"
+ },
+ {
+  "id": 10,
+  "first_name": "Traver",
+  "last_name": "Smyth",
+  "email": "tsmyth9@godaddy.com",
+  "address": "77 Shoshone Center",
+  "phone": "4736448357",
+  "password": "tiN12npI",
+  "image": "user_10.jpg",
+  "category": "user"
+ },
+ {
+  "id": 11,
+  "first_name": "Minetta",
+  "last_name": "Hardy-Piggin",
+  "email": "mhardypiggina@github.io",
+  "address": "092 Jenna Circle",
+  "phone": "4992837007",
+  "password": "y1LWRC5m27X",
+  "image": "user_11.jpg",
+  "category": "user"
+ },
+ {
+  "id": 12,
+  "first_name": "Wilbert",
+  "last_name": "Jowett",
+  "email": "wjowettb@friendfeed.com",
+  "address": "94 Sachtjen Point",
+  "phone": "7665374528",
+  "password": "x4sFAx1Bk",
+  "image": "user_12.jpg",
+  "category": "user"
+ },
+ {
+  "id": 13,
+  "first_name": "Cati",
+  "last_name": "Sicha",
+  "email": "csichac@discuz.net",
+  "address": "7 Dahle Parkway",
+  "phone": "5074542924",
+  "password": "QaWYnpBtVZsz",
+  "image": "user_13.jpg",
+  "category": "user"
+ },
+ {
+  "id": 14,
+  "first_name": "Der",
+  "last_name": "Mynett",
+  "email": "dmynettd@google.it",
+  "address": "68073 Valley Edge Way",
+  "phone": "4811598477",
+  "password": "dof7o5Za086",
+  "image": "user_14.jpg",
+  "category": "user"
+ },
+ {
+  "id": 15,
+  "first_name": "Bill",
+  "last_name": "Fundell",
+  "email": "bfundelle@naver.com",
+  "address": "2967 Roth Drive",
+  "phone": "6504246993",
+  "password": "yTY63Zog8yNg",
+  "image": "user_15.jpg",
+  "category": "user"
+ },
+ {
+  "id": 16,
+  "first_name": "Ree",
+  "last_name": "Tembridge",
+  "email": "rtembridgef@princeton.edu",
+  "address": "18 Westport Road",
+  "phone": "4171263602",
+  "password": "fW4MoReSoo",
+  "image": "user_16.jpg",
+  "category": "user"
+ },
+ {
+  "id": 17,
+  "first_name": "Austin",
+  "last_name": "Ledwith",
+  "email": "aledwithg@usnews.com",
+  "address": "7 Thierer Place",
+  "phone": "5853109856",
+  "password": "6exYj6AK",
+  "image": "user_17.jpg",
+  "category": "user"
+ },
+ {
+  "id": 18,
+  "first_name": "Devon",
+  "last_name": "Hamshar",
+  "email": "dhamsharh@boston.com",
+  "address": "2449 Schurz Court",
+  "phone": "9704304823",
+  "password": "5bX6kIN4",
+  "image": "user_18.jpg",
+  "category": "user"
+ },
+ {
+  "id": 19,
+  "first_name": "Damiano",
+  "last_name": "Galvin",
+  "email": "dgalvini@shop-pro.jp",
+  "address": "0299 Nelson Trail",
+  "phone": "9229725054",
+  "password": "MdNFdhIth4v",
+  "image": "user_19.jpg",
+  "category": "user"
+ },
+ {
+  "id": 20,
+  "first_name": "Francois",
+  "last_name": "Eales",
+  "email": "fealesj@wiley.com",
+  "address": "9709 Forest Dale Parkway",
+  "phone": "7838583569",
+  "password": "ERrMdh",
+  "image": "user_20.jpg",
+  "category": "user"
+ },
+ {
+  "id": 21,
+  "firstName": "ale",
+  "lastName": "russo",
+  "email": "alejandrorusso84@hotmail.com",
+  "image": "image-1647031440761.jpg",
+  "category": "user",
+  "token": "+8sz/EjWRjfp9WRTe533FtrcZ19nKOEJXUNi26UWMmoZHK5rzDr2IJom952HiURXJNL1RLVtWV986tSbDvgaPQ=="
+ },
+ {
+  "id": 22,
+  "firstName": "ale3",
+  "lastName": "russo3",
+  "email": "Sorrentinoa@fibertel.com.ar",
+  "password": "$2a$10$MDnOD1NAV6tDZkIlJl8iE.gT.ya5yqcbCoplWyzkM7gT4esMVwuem",
+  "image": "image-1647059539995.png",
+  "category": "user"
+ },
+ {
+  "id": 23,
+  "firstName": "ale4",
+  "lastName": "russo4",
+  "email": "alerusso@gmail.com",
+  "password": "$2a$10$ODCZO82k5veBGkp3W0Far.XrskZsUCTWACWbleh0VI.eb40y4Hdx2",
+  "image": "image-1648941035451.jpg",
+  "category": "user"
+ }
+]

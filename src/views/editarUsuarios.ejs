@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include("./partials/head") %>
+  <!-- fin head -->          
+  <style>.container {padding-right: 20px;padding-left: 20px;}</style>
+
+  
+<!--  Body -->
+<body>
+  <!--   header fin -->
+  <%- include("./partials/header") %>
+  <!--   Header fin  -->
+<!-- Jumbotron -
+<div class="banner">
+  <div class="container">
+    <div>
+        <h1>Registrate</h1>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron fin  -->
+
+<!-- seccion Product -->
+
+
+  <!--<style>.container {padding-right: 20px;padding-left: 20px;}</style>
+  
+  
+    <!-- Body Start-->
+    <body class="body-registro">
+    
+      <div class="body-registro1">
+            
+        <form  action="/users/<%=users.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="registro-contenedor">
+
+        <div class="registro-contenedor2">  
+            
+            
+            <div class="registro-nombre">
+                <div class="registro-titulo">
+                  <h2 class='login-titulo'>M<span class="login-span">arketPet</span></h2>
+    
+                  <h2 class='login-titulo'>E<span class="login-span">ditar Usuario</span></h2>
+                </div>
+        
+                
+                <div>
+                
+                
+                <label for='firstName' class="label-registro">Nombre Completo:</label>
+                <input class="<%= locals.errors && errors.firstName ? 'invalido' : 'input-registro' %>" 
+                type="text" 
+                name="firstName" 
+                value="<%=users.firstname %>"
+                placeholder="Nombre"
+                id="firstName"
+                >
+                <%if (locals.errors && errors.firstName){%>
+                    <div class="alarm">
+                      <%=errors.firstName.msg%>
+                    </div>
+                  <%}%>
+
+                <label for='lastName' class="label-registro">Apellido:</label>
+                <input 
+                class="<%= locals.errors && errors.lastName ? 'invalido' : 'input-registro' %>"
+                type="text" 
+                for="lastName" 
+                name="lastName" 
+                id="lastName" 
+                value="<%=users.lastname %>"
+                placeholder="Apellido">
+                <%if (locals.errors && errors.lastName){%>
+                    <div class="alarm">
+                      <%=errors.lastName.msg%>
+                    </div>
+                  <%}%>
+
+                <label for="phone" class="label-registro">Telefono/Celular:</label>
+                <input 
+                class="input-registro" 
+                type="number"
+                value="<%=users.phone %>"
+                name="phone"
+                for="phone">
+
+                <label for="adress" class="label-registro">Dirección:</label>
+                <input 
+                class="input-registro" 
+                type="text" 
+                value="<%=users.adress %>"
+                name="adress"
+                for="adress"
+                >
+                </div>
+            </div>
+
+
+            <div class="registro-correo">
+                <div>
+                    <div class="circular--landscape">
+                        <img src="/images/users/<%=users.profileImage%>"
+                        onclick="document.getElementById('avatar').click();" />
+                    </div>
+                    <input type="file" name="avatar" id="avatar" style="display:none;"> <br>
+                    
+                    <input
+                    type="button"
+                    class="btn-submit"
+                    value="Cambiar Foto de Perfil"
+                    onclick="document.getElementById('avatar').click();"/>
+                </div>
+
+
+                <label for='email' class="label-registro"> Ingrese su Correo-Electronico:</label>
+                <input class="<%= locals.errors && errors.email ? 'invalido' : 'input-registro' %>"
+                id="email"
+                type="text" 
+                for="email" 
+                name="email" 
+                value="<%=users.email %>"
+                placeholder="ejemplo@gmail.com">
+                <%if (locals.errors && errors.email){%>
+                    <div class="alarm">
+                      <%=errors.email.msg%>
+                    </div>
+                  <%}%>
+
+                  <label for="category" class="form-label">Categoría de Usuario:</label>
+                    <select name="category1"  class="form-input">
+                        <option value="">Elegí</option>
+                        <%categoryMascota.forEach(function(category){%>
+                            <% if (category.id==users.userCategory_id){%>
+                        <option value="<%=category.id%>" selected>
+                            <%=category.name%>
+                        </option>
+                            <%} else {%>
+                                <option value="<%=category.id%>">
+                                    <%=category.name%>
+                                </option>
+                            <%}%>
+
+                        <% }); %>
+                        </select> 
+
+                
+                
+            </div>
+            
+
+            
+        </div>
+        <div class="contenedor-btn-registrarser">
+        <input type="submit" class="btn-registrarser" value="Editar Usuario">
+        </div>
+        </div>
+        
+    </form>
+    </div>
+    
+    
+    
+    <script src="https://kit.fontawesome.com/b1ee9d91d2.js" crossorigin="anonymous"></script>
+
+    
+    
+    
+    
+    
+    
+    
+
+   
+
+<!-- termina seccion contacto -->
+   
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- js -->
+    <script src="/js/animate.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+
+    </body>
+  <!-- termina Body  -->
+</html>

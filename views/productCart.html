@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="ostacor">
+    <meta name="keywords" content="HTML5,CSS3,Bootstrap,JavaScript,jquery">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+          <title>MarkPet</title>
+          <!-- bootstrap -->
+          <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+          <!-- Custom CSS: custom Styles -->
+          <link href="../public/css/animate.css" rel="stylesheet">
+          <link href="../public/css/main.css" rel="stylesheet">
+
+          <!-- Google Font and font-awesome -->
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,400i,500,600,700" rel="stylesheet">
+                
+
+  <style>.container {padding-right: 20px;padding-left: 20px;}</style>
+  </head>
+  
+<!-- Body Start-->
+<body>
+<header class="header" id="myHeader">
+<!-- nav -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Mark<span>Pet</span></a>
+    </div>
+
+    <!-- nav links -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a></li>
+        <li><a href="about.html">Nosotros </a></li>
+        <li><a href="shop.html">Shop </a></li>
+        <li><a href="services.html">Servicios </a></li>
+        <li><a href="blog.html">Blog </a></li>
+        <li><a href="#contact">Contacto </a></li>
+        <li><a href="login.html">Ingresá </a></li>
+        <li class="active"><a href="productCart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="sr-only">(current)</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-->
+</nav>
+<!-- nav Ended-->
+</header>
+
+<!-- Jumbotron -->
+<div class="banner">
+  <div class="container">
+    <div>
+        <h1>Carrito de Compras</h1>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron End -->
+
+<!-- Product Section Start -->
+<section id="product">
+  <div class="container">
+   <div class="inner-content">
+    <h2>Productos</h2>
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+          // Variables
+          const baseDeDatos = [
+              {
+                  id: 1,
+                  nombre: 'Collar negro perro',
+                  precio: 23,
+                  imagen: '../public/images/product-2.jpg'
+              },
+              {
+                  id: 2,
+                  nombre: 'Collar perro negro',
+                  precio: 23,
+                  imagen: '../public/images/product-3.jpg'
+              },
+              {
+                  id: 3,
+                  nombre: 'Collar perro',
+                  precio: 23,
+                  imagen: '../public/images/product-1.jpg'
+              },
+              {
+                  id: 4,
+                  nombre: 'Collar negro',
+                  precio: 23,
+                  imagen: '../public/images/product-4.jpg'
+              }
+
+          ];
+
+          let carrito = [];
+          const divisa = '$';
+          const DOMitems = document.querySelector('#items');
+          const DOMcarrito = document.querySelector('#carrito');
+          const DOMtotal = document.querySelector('#total');
+          const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+          const miLocalStorage = window.localStorage;
+
+          // Funciones
+
+
+          function renderizarProductos() {
+              baseDeDatos.forEach((info) => {
+                  // Estructura
+                  const miNodo = document.createElement('div');
+                  miNodo.classList.add('card', 'col-sm-4');
+                  // Body
+                  const miNodoCardBody = document.createElement('div');
+                  miNodoCardBody.classList.add('card-body');
+                  // Titulo
+                  const miNodoTitle = document.createElement('h5');
+                  miNodoTitle.classList.add('card-title');
+                  miNodoTitle.textContent = info.nombre;
+                  // Imagen
+                  const miNodoImagen = document.createElement('img');
+                  miNodoImagen.classList.add('img-fluid');
+                  miNodoImagen.setAttribute('src', info.imagen);
+                  // Precio
+                  const miNodoPrecio = document.createElement('p');
+                  miNodoPrecio.classList.add('card-text');
+                  miNodoPrecio.textContent = `${info.precio}${divisa}`;
+                  // Boton 
+                  const miNodoBoton = document.createElement('button');
+                  miNodoBoton.classList.add('btn', 'btn-primary');
+                  miNodoBoton.textContent = '+';
+                  miNodoBoton.setAttribute('marcador', info.id);
+                  miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+                  // Insertamos
+                  miNodoCardBody.appendChild(miNodoImagen);
+                  miNodoCardBody.appendChild(miNodoTitle);
+                  miNodoCardBody.appendChild(miNodoPrecio);
+                  miNodoCardBody.appendChild(miNodoBoton);
+                  miNodo.appendChild(miNodoCardBody);
+                  DOMitems.appendChild(miNodo);
+              });
+          }
+
+          /**
+          * añadir un producto al carrito de la compra
+          */
+          function anyadirProductoAlCarrito(evento) {
+              // Anyadimos el Nodo a nuestro carrito
+              carrito.push(evento.target.getAttribute('marcador'))
+              // Actualizamos el carrito 
+              renderizarCarrito();
+              // Actualizamos el LocalStorage
+              guardarCarritoEnLocalStorage();
+          }
+
+          /**
+          * Dibuja todos los productos guardados en el carrito
+          */
+          function renderizarCarrito() {
+              // Vaciamos todo el html
+              DOMcarrito.textContent = '';
+              // Quitamos los duplicados
+              const carritoSinDuplicados = [...new Set(carrito)];
+              // Generamos los Nodos a partir de carrito
+              carritoSinDuplicados.forEach((item) => {
+                  // Obtenemos el item que necesitamos de la variable base de datos
+                  const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                      // ¿Coincide las id? Solo puede existir un caso
+                      return itemBaseDatos.id === parseInt(item);
+                  });
+                  // Cuenta el número de veces que se repite el producto
+                  const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+                      // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+                      return itemId === item ? total += 1 : total;
+                  }, 0);
+                  // Creamos el nodo del item del carrito
+                  const miNodo = document.createElement('li');
+                  miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+                  miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+                  // Boton de borrar
+                  const miBoton = document.createElement('button');
+                  miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                  miBoton.textContent = 'X';
+                  miBoton.style.marginLeft = '1rem';
+                  miBoton.dataset.item = item;
+                  miBoton.addEventListener('click', borrarItemCarrito);
+                  // Mezclamos nodos
+                  miNodo.appendChild(miBoton);
+                  DOMcarrito.appendChild(miNodo);
+              });
+              // Renderizamos el precio total en el HTML
+              DOMtotal.textContent = calcularTotal();
+          }
+
+          /**
+          * Evento para borrar un elemento del carrito
+          */
+          function borrarItemCarrito(evento) {
+              // Obtenemos el producto ID que hay en el boton pulsado
+              const id = evento.target.dataset.item;
+              // Borramos todos los productos
+              carrito = carrito.filter((carritoId) => {
+                  return carritoId !== id;
+              });
+              // volvemos a renderizar
+              renderizarCarrito();
+              // Actualizamos el LocalStorage
+              guardarCarritoEnLocalStorage();
+
+          }
+
+          /**
+           * Calcula el precio total teniendo en cuenta los productos repetidos
+           */
+          function calcularTotal() {
+              // Recorremos el array del carrito 
+              return carrito.reduce((total, item) => {
+                  
+                  const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                      return itemBaseDatos.id === parseInt(item);
+                  });
+                
+                  return total + miItem[0].precio;
+              }, 0).toFixed(2);
+          }
+
+          /**
+          * Varia el carrito y vuelve a dibujarlo
+          */
+          function vaciarCarrito() {
+              // Limpiamos los productos guardados
+              carrito = [];
+              // Renderizamos los cambios
+              renderizarCarrito();
+              // Borra LocalStorage
+              localStorage.clear();
+
+          }
+
+          function guardarCarritoEnLocalStorage () {
+              miLocalStorage.setItem('carrito', JSON.stringify(carrito));
+          }
+
+          function cargarCarritoDeLocalStorage () {
+              // ¿Existe un carrito previo guardado en LocalStorage?
+              if (miLocalStorage.getItem('carrito') !== null) {
+                  // Carga la información
+                  carrito = JSON.parse(miLocalStorage.getItem('carrito'));
+              }
+          }
+
+          // Eventos
+          DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+          // Inicio
+          cargarCarritoDeLocalStorage();
+          renderizarProductos();
+          renderizarCarrito();
+      });
+  </script>
+</head>
+
+  <div class="container">
+      <div class="row">
+         
+          <main id="items" class="col-sm-9 row"></main>
+          <!-- Carrito -->
+          <aside class="col-sm-3">
+
+
+
+
+
+              <h2>Carrito</h2>
+              <!-- Elementos del carrito -->
+              <ul id="carrito" class="list-group"></ul>
+              <hr>
+              <!-- Precio total -->
+              <p class="text-right">Total: <span id="total"></span>ARS;</p>
+              <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+          </aside>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Container End -->
+</section>
+<!-- Product Section End -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+ <div class="container">
+  <div class="row">
+   <div class="inner-content">
+    <div class="col-sm-6"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+     <h2 class="left">Contacto</h2>
+      <form>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" name="nombre" placeholder="Nombre" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" name="comentario" placeholder="Comentario" rows="8"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-left" type="submit">Enviar</button>
+        </div>
+      </div> 
+      </form>
+    </div>
+    <div class="col-sm-5 address"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+      <h2>Donde estamos</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
+      <ul class="social-icon">
+         <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+         <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+         <li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+    </div>
+  <footer class="main-footer">
+     <div class="container">
+     <div class="row">
+      <div class="col-sm-3">
+          <p><a class="footer-logo" href="index.html">Mark<span>Pet</span></a></p>
+      </div>
+      <div class="col-sm-9">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="hidden-xs" href="#">|</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a class="hidden-xs" href="#">|</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a class="hidden-xs" href="#">|</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a class="hidden-xs" href="#">|</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a class="hidden-xs" href="#">|</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+          <p>(C) 2022, All Rights Reserved, Designed by Grupo4</p>
+      </div>
+      </div>
+      </div>
+  </footer>
+</section>
+<!-- Contact Section End -->
+   
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- js -->
+    <script src="../public/js/animate.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/custom.js"></script>
+
+    </body>
+  <!-- Body Ended -->
+</html>

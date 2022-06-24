@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Inicio del head -->
+    <script src="../../js/inventario.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<%- include("./partials/head") %>
+
+    <!-- Fin del head -->
+
+    <body>
+    <!-- Inicio del Header -->
+    
+    <%- include("./partials/header") %>
+    
+    <!-- Fin del Header -->
+    
+
+    <div class="contenedor-inventario">
+
+        <div class="contenedor-inventario1">
+
+        <div class="contenedor-iventario2">
+
+            <div class="inventario-categoria">Producto:</div>
+
+            <div class="inventario-categoria">Stock:</div>
+
+            <div class="inventario-categoria">Precio:</div>
+
+            <div class="inventario-categoria">Categoría de Mascotas:</div>
+            
+            <div class="inventario-categoria">Categoria de Producto:</div>
+
+            <div class="inventario-categoria"></div>
+
+            <div class="inventario-categoria"></div>
+        </div>
+
+        <div class="barrainventario">
+        <% products.forEach(function(products){%>
+
+        <div class="contenedor-iventario3">
+            
+            <div class="inventario-subcategoria"><%=products.name%></div>
+
+            <div class="inventario-subcategoria"> <%=products.stock%></div>
+
+            <div class="inventario-subcategoria"> <%=products.price%></div>
+
+            <%if(products.categoryMascotas_id==1){%>
+
+            <div class="inventario-subcategoria">Perro</div>
+            <%}%>
+
+            <%if(products.categoryMascotas_id==2){%>
+
+            <div class="inventario-subcategoria">Gato</div>
+            <%}%>
+
+            <%if(products.categoryMascotas_id==3){%>
+
+            <div class="inventario-subcategoria">Ave</div>
+            <%}%>
+
+            <%if(products.categoryMascotas_id==4){%>
+
+            <div class="inventario-subcategoria">Pez</div>
+            <%}%>
+
+            <div class="inventario-subcategoria"> <%=products.price%></div>
+
+            <div class="inventario-editar"><a href="/products/<%=products.id%>/edit">Editar</a></div>
+
+            <div class="inventario-borrar product-delete"> <a href="/products/<%=products.id%>/destroy">Borrar</a></div>
+            <!-- <form action="/products/<%=products.id%>/destroy" method="POST" >
+                <input type="submit" class="btn-borrar" value="Borrar Producto">
+            </form> -->
+            
+            
+            
+        </div>
+        <%})%>
+        </div>
+
+
+    </div>
+
+    </div>
+    
+        
+            
+    
+
+</body>
+</html>

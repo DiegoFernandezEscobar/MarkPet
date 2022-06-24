@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Inicio del head -->
+
+<%- include("./partials/head") %>
+
+    <!-- Fin del head -->
+
+<body>
+    <!-- Inicio del Header -->
+    
+    <%- include("./partials/header") %>
+    
+    <!-- Fin del Header -->
+    <body class="body222">
+        <div class="form3">
+        <form  action="/products/<%=products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="form-header">
+                <h2 class='form-title'>E<span class="span2">dicion del Producto</span></h2>
+            </div>
+            
+            <div class='contenedor11'>
+                <div class="class1">
+                
+                    <img class="imagen" src="/images/productos/<%=products.imagen%>" alt="">
+
+                    <input class="form-input" type="file" name="image" id="image" style="display:none;"> <br>
+
+                    <input
+                    type="button"
+                    class="btn-submit"
+                    value="CAMBIAR IMAGEN"
+                    onclick="document.getElementById('image').click();"
+                  />
+                </div>
+                
+                
+                <div class="class">
+                    
+                    
+                    <label for='name' class="form-label" >Nombre del producto:</label>
+                    <input class='form-input'  type="text" name="name" id="name" value="<%=products.name%>"><br>
+
+                    <label for="description" class="form-label">Descripcion</label>
+                    <textarea name="description" id="description" class="form-input"><%=products.description%> </textarea>
+            
+                    <label for="price" class="form-label" >Precio del Producto:</label>
+                    <input class='form-input' type="number" name="price" id="price" value="<%=products.price%>"><br>
+                    <div class="contenedor2">
+                        <div class="stock">
+                            <label for="stock" class="form-label" >Stock:</label>
+                            <input class="form-input" type="number" name="stock" id="stock" value="<%=products.stock%>">
+                        </div>
+                        <div>
+                            <label for="discount" class="form-label" >Descuento:</label>
+                            <input class="form-input" type="number" name="discount" id="discount" value="<%=products.discount%>"><br>
+                        </div>
+                    </div>
+                    <label for="category" class="form-label">Categoría de Mascotas:</label>
+                    <select name="category"  class="form-input">
+                        <option value="">Elegí</option>
+                        <%categoryMascota.forEach(function(category){%>
+                            <% if (category.id==products.categoryMascotas_id){%>
+                        <option value="<%=category.id%>" selected>
+                            <%=category.nameMascota%>
+                        </option>
+                            <%} else {%>
+                                <option value="<%=category.id%>">
+                                    <%=category.nameMascota%>
+                                </option>
+                            <%}%>
+
+                        <% }); %>
+                        </select> 
+
+                        <label for="category" class="form-label">Categoría de Producto:</label>
+                    <select name="category1"  class="form-input">
+                        <option value="">Elegí</option>
+                        <%categoryProduct.forEach(function(category){%>
+                            <% if (category.id==products.categoryProductos_id){%>
+                        <option value="<%=category.id%>" selected>
+                            <%=category.nameProduct%>
+                        </option>
+                            <%} else {%>
+                                <option value="<%=category.id%>">
+                                    <%=category.nameProduct%>
+                                </option>
+                            <%}%>
+
+                        <% }); %>
+                        </select> 
+
+
+                       
+                    
+                </div>
+                    
+
+
+                
+
+            </div>
+        
+                <input type="submit" class="btn-submit" value="Modificar Producto">
+            
+        </form>
+
+        <form action="/products/<%=products.id%>/destroy" method="POST" >
+            <input type="submit" class="btn-borrar" value="Borrar Producto">
+        </form>
+        </div>
+
+</body>
+</html>

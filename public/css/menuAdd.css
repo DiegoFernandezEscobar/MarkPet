@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box ;
+}
+
+
+
+/* Creacion de Fomulario */
+
+.contenedor2{
+    display: flex;
+}
+
+.stock{
+    margin-right: 15px;
+    width: 50%;
+}
+
+.imagen{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 15px;
+    border-radius: 10%;
+
+}
+
+.body222{
+    background: url(../images/angelina-litvin-39774-unsplash.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.contenedor11{
+    display: flex;
+    margin: 25px;
+}
+
+.class{
+    width: 50%;
+    margin-right: 20px;
+
+}
+
+
+.class1{
+    width: 50%;
+    margin-right:20px ;
+    height: 100%
+}
+
+
+.form-title{
+    color: orange;
+}
+
+.form-title{
+
+    font-weight: normal;
+    font-family: sans-serif;
+    color: orange;
+}
+
+.span2{
+    color:white;
+}
+
+.form-header{
+    text-align: center;
+}
+
+
+.form3{
+    background: rgba(0, 0, 0, 0.8);
+    margin:auto;
+    width: 60%;
+    padding: 5px 35px;
+    margin-top: 100px ;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    margin-bottom:150px ;
+
+}
+
+.form-label{
+    display:block;
+    color:white;
+    font-size: 16px;
+    position: relative;
+}
+
+.form-input{
+    background: rgba(0, 0, 0, 0.856);
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color:white;
+    border: none;
+    border-bottom: 2px solid orange;
+    border-radius: 5px;
+    
+}
+
+.form-input::placeholder{color:white;}
+
+.submit-guardar2{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-submit-guardar{
+    width: 200px ;
+    color: rgb(255, 255, 255);
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor:pointer;
+    margin:auto 0;
+    justify-content: center;
+}
+
+.btn-submit-guardar:hover{
+    background-color: rgb(0, 185, 0);
+    transition: 0.5s;
+}
+.btn-borrar{
+    width: 100% ;
+    color: white;
+    background-color:red;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor:pointer;
+    margin-top: 10px;
+}
+
+.btn-imagenn{
+    width: 165px ;
+    color: rgb(255, 255, 255);
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor:pointer;
+    justify-content: center;
+    margin-left: 75px;
+}
+
+
+.btn-imagenn:hover{
+    background-color: rgb(0, 185, 0);
+    transition: 0.5s;
+
+}
+
+
+
+
+@media (max-width:500px){
+
+    .contenedor11{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .class1{
+        width: 50%;
+        margin-right:20px ;
+        height: 50%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .btn-imagenn{
+        width: 165px ;
+        color: rgb(255, 255, 255);
+        background-color: orange;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 0;
+        cursor:pointer;
+        justify-content: center;
+    }
+
+    .class{
+        width: 200px;
+        margin:0;
+    }
+
+    .form-input{
+        background: rgba(0, 0, 0, 0.856);
+        width: 150px;
+        margin-bottom: 20px;
+        border-radius: 2px;
+        font-size: 14px;
+        color:white;
+        border: none;
+        border-bottom: 2px solid orange;
+        border-radius: 5px;
+        
+    }
+
+    .form3{
+        background: rgba(0, 0, 0, 0.8);
+        margin:auto;
+        width: 80%;
+        padding: 5px 35px;
+        margin-top: 100px ;
+        padding-bottom: 30px;
+        border-radius: 20px;
+        margin-bottom:150px ;
+    
+    }
+    
+    .form-input{
+        background: rgba(0, 0, 0, 0.856);
+        width: 200px;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 2px;
+        font-size: 14px;
+        color:white;
+        border: none;
+        border-bottom: 2px solid orange;
+        border-radius: 5px;
+        
+    }
+
+
+}

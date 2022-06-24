@@ -1,0 +1,229 @@
+<header>
+    <%if(user && user.userCategory_id==2){%>
+        <nav class="menu-administrador menu" id="menu">
+            <%}else{%>
+        <nav class="menu" id="menu">
+        <%}%>
+      <%if(user.userCategory_id==2){%>
+      <div class="contenedor-logo-administrador" id="contenedor-logo">
+          <%}else{%>
+      <div class="contenedor-logo" id="contenedor-logo">
+      <%}%>
+      <%if(user.userCategory_id==2){%>
+          <div class="logo-administrador">
+              <%}else{%>
+        <div class="logo">  
+            <%}%>   
+              <a href="/">
+              <p>Mark<span class="pet">Pet</span></p>
+                </a>
+                <%if(user.userCategory_id==2){%>
+                    <div class="Administrador-color">
+                        <h2>Administrador</h2>
+                    </div>
+                    <%}%>
+          </div>
+        
+
+          <div class="cuenta-carrito">
+            <% if (!user) { %>
+            <a class="ingresar" href="/login">Ingresar </a>
+              <a class="registro" href="/register">Registro</a>
+              <a class="casa" href='/'> <i class="fas fa-home"></i></a>
+             <% } %>
+             <% if (user && user.userCategory_id==1) { %>
+              <a class="registro" href="/profile"> <i class="fas fa-user"></i></a>
+                
+                    <form action="/logout" method="POST">
+                          <a onclick="this.closest('form').submit();return false;"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar Sesion </a>
+                        </form>
+                        <a class="carrito" href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="casa" href='/'> <i class="fas fa-home"></i></a>
+             <% } %>  
+             <% if (user && user.userCategory_id==2) { %>
+                <a class="registro casa" href="/profile"> <i class="fas fa-user"></i></a>
+                <a class="casa" href='/'> <i class="fas fa-home"></i></a>
+                <form action="/logout" class="casa" method="POST">
+                    <a onclick="this.closest('form').submit();return false;"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar Sesion </a>
+                  </form>
+               <% } %>  
+              
+          </div>
+          
+      </div>
+      <% if (user && user.userCategory_id==2) { %>
+
+      <div class="barra-administrador">
+        <a class="barra-administrador-sub" href="/products/create">Crear Productos</a>
+        <a class="barra-administrador-sub" href="/verUsuarios">Ver Usuarios </a>
+        <a class="barra-administrador-sub" href="/inventario">Inventario </a>
+      </div>
+
+      <%}%>
+
+
+      <div class="contenedor contenedor-botones-menu">
+          <button id="btn-menu-barras" class="btn-menu-barras"><i class="fa-solid fa-paw"></i></button>
+          <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+
+
+      <div class="contenedor contenedor-enlaces-nav">
+          <div class="btn-mascotas" id="btn-mascotas">
+              <a href="#">Mascotas <i class="fa-solid fa-angle-down"></i></a>
+              
+          </div>
+
+              <a class="btn-servicios" id="btn-servicios" href="/services">Servicios</a>
+              <a class="ofertas" href="/shop/Ofertas"> <i class="fa-solid fa-percent"></i> Ofertas</a>
+              <a class="shop" href="/shop">Shop</a>
+              <a class="nosotros" href="/about">Nosotros</a>
+        
+      </div>
+
+      <div class="contenedor contenedor-grid">
+          <div class="grid" id="grid">
+              <div class="categorias">
+                  <button class="btn-regresar"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+                  <h3 class="subtitulo">Categorias</h3>
+                  <a href="/shop/perros" data-categoria="perros">Perros <i class="fa-solid fa-angle-right"></i></a>
+                  <a href="/shop/gatos" data-categoria="gatos">Gatos <i class="fa-solid fa-angle-right"></i></a>
+                  <a href="#" data-categoria="aves">Aves <i class="fa-solid fa-angle-right"></i></a>
+                  <a href="#" data-categoria="peces">Peces <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+              <div class="contenedor-subcategorias">
+                  
+                  
+                  <div class="subcategoria activo" data-categoria="perros">
+                      <div class="enlaces-subcategorias">
+                          <button class="btn-regresar"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+                          <h3 class="subtitulo">Perros</h3>
+                          <a href="/shop/perros/Alimentos">Alimentos <i class="fa-solid fa-paw"></i></a>
+                          <a href="/shop/perros/JuguetesyAccesorios">Juguetes y Accesorios <i class="fa-solid fa-paw"></i></a>
+                          <a href='/shop/perros/HigieneyEstetica'>Higiene y Estetica <i class="fa-solid fa-paw"></i></a>
+                          <a href="/shop/perros/Salud">Salud <i class="fa-solid fa-paw"></i></a>
+                      </div>
+
+                      <div class="banner-subcategoria">
+                          <a href="#">
+                              <img src="/images/menu/perrobanner.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="galeria-subcategoria">
+                          <a href="#">
+                              <img src="/images/menu/perro1.jpg" alt="">
+                          </a>
+                          <a href="#">
+                              <img src="/images/menu/perro2.png" alt="">
+                          </a>
+                          <a href="#">
+                              <img src="/images/menu/perro3.jpeg" alt="">
+                          </a>
+                          <a href="#">
+                              <img src="/images/menu/perro4.webp" alt="">
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="subcategoria" data-categoria="gatos">
+                      <div class="enlaces-subcategorias">
+                          <button class="btn-regresar"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+                          <h3 class="subtitulo">Gatos</h3>
+                          <a href="/shop/gatos/Alimentos">Alimentos <i class="fa-solid fa-paw"></i></a>
+                          <a href="/shop/gatos/JuguetesyAccesorios">Juguetes y Accesorios <i class="fa-solid fa-paw"></i></a>
+                          <a href='/shop/gatos/HigieneyEstetica'>Higiene y Estetica <i class="fa-solid fa-paw"></i></a>
+                          <a href="/shop/gatos/Salud">Salud <i class="fa-solid fa-paw"></i></a>
+                      </div>
+
+                      <div class="banner-subcategoria">
+                          <a href="#">
+                              <img src="/images/menu/gatobanner.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="galeria-subcategoria">
+                          <a href="#">
+                              <img src="/images/menu/gato1.webp" alt="">
+                          </a>
+                          <a href="#">
+                              <img src="/images/menu/gatos2.jpg" alt="">
+                          </a>
+                          <a href="#">
+                              <img src="/images/menu/gato3.jpg" alt="">
+                          </a>
+                          <a href="#">
+                              <img src="/images/menu/gato4.jpg" alt="">
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="subcategoria " data-categoria="aves">
+                      <div class="enlaces-subcategorias">
+                          <button class="btn-regresar"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+                          <h3 class="subtitulo">Aves</h3>
+                          
+                          <a href="/shop/aves/Alimentos">Alimentos <i class="fa-solid fa-paw"></i></a>
+                          <a href="/shop/aves/JuguetesyAccesorios">Juguetes y Accesorios <i class="fa-solid fa-paw"></i></a>
+                      </div>
+
+                      <div class="banner-subcategoria">
+                          <a href="#">
+                              <img src="/images/menu/avesbanner.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="galeria-subcategoria">
+                          <a href="">
+                              <img src="/images/menu/ave1.png" alt="">
+                          </a>
+                          <a href="">
+                              <img src="/images/menu/ave2.png" alt="">
+                          </a>
+                          <a href="">
+                              <img src="/images/menu/ave3.jpg" alt="">
+                          </a>
+                          <a href="">
+                              <img src="/images/menu/ave4.jpg" alt="">
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="subcategoria " data-categoria="peces">
+                      <div class="enlaces-subcategorias">
+                          <button class="btn-regresar"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+                          <h3 class="subtitulo">Peces</h3>
+                          
+                          <a href="/shop/peces/Alimentos">Alimentos <i class="fa-solid fa-paw"></i></a>
+                          <a href="/shop/peces/JuguetesyAccesorios">Juguetes y Accesorios <i class="fa-solid fa-paw"></i></a>
+                      </div>
+
+                      <div class="banner-subcategoria">
+                          <a href="#">
+                              <img src="/images/menu/pecesbanner.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="galeria-subcategoria">
+                          <a href="">
+                              <img src="/images/menu/peces1.webp" alt="">
+                          </a>
+                          <a href="">
+                              <img src="/images/menu/peces2.webp" alt="">
+                          </a>
+                          <a href="">
+                              <img src="/images/menu/peces3.jpg" alt="">
+                          </a>
+                          <a href="">
+                              <img src="/images/menu/peces4.jpg" alt="">
+                          </a>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+      </div>
+
+  </nav>
+  <script src="https://kit.fontawesome.com/b1ee9d91d2.js" crossorigin="anonymous"></script>
+  <script src="/js/menu.js"></script>
+</header>
+    <!-- Header End -->

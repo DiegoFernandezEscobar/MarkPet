@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!DOCTYPE html>
+    <html lang="en">
+    <%- include("./partials/head") %>
+      
+    <!-- Body Start-->
+    <body>
+    <!-- Header -->
+    <%- include("./partials/header") %>
+    <!-- Header End -->
+      <!-- Body Start-->
+      <body class="body-registro">
+    
+        <div class="body-registro1">
+              
+        
+          <div class="registro-contenedor">
+  
+          <div class="registro-contenedor2">  
+              
+              
+              <div class="registro-nombre">
+                  <div class="registro-titulo">
+                    <h2 class='login-titulo'>M<span class="login-span">arketPet</span></h2>
+      
+                    <h2 class='login-titulo'>Mi<span class="login-span">Perfil</span></h2>
+                  </div>
+
+
+                  <div>
+                    <div class="circular--landscape">
+                        <img src="/images/users/<%= user.profileImage %>"/>
+                    </div>
+            
+                </div>
+          
+                  
+
+              </div>
+  
+  
+              <div class="registro-correo">
+                <div>
+                  
+                  
+                    <h2 for='firstName' class="label-registro1">Nombre:<%= user.firstname %></h2>
+  
+                    <h2 for='lastName' class="label-registro1">Apellido:<%= user.lastname %></h2>
+                    
+                    <h2 for="phone" class="label-registro1">Telefono/Celular:<%=user.phone%></h2>
+                  
+                    <h2 for="adress" class="label-registro1">Dirección:<%=user.adress%></h2>
+  
+                    <h2 for='firstName' class="label-registro1">E-mail:<%= user.email %></h2>
+                   
+                    </div>
+                  
+                  
+              </div>
+              
+  
+              
+          </div>
+          </div>
+      </div>
+      
+      
+      
+      <script src="https://kit.fontawesome.com/b1ee9d91d2.js" crossorigin="anonymous"></script>
+      <script src="/js/valdaciondeformulario.js"></script>
+
+
+        
+            
+                
+                
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    
+        
+    
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../public/js/sweetAlert.js"></script>
+
+    </body>
+    
+</html>

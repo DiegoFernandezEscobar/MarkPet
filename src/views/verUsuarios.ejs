@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Inicio del head -->
+
+<%- include("./partials/head") %>
+
+    <!-- Fin del head -->
+
+    <body>
+    <!-- Inicio del Header -->
+    
+    <%- include("./partials/header") %>
+    
+    <!-- Fin del Header -->
+    
+
+    <div class="contenedor-inventario">
+
+        <div class="contenedor-inventario1">
+
+        <div class="contenedor-iventario2">
+
+            <div class="inventario-categoria">Nombre:</div>
+
+            <div class="inventario-categoria">Apellido:</div>
+
+            <div class="inventario-categoria">E-mail:</div>
+
+            <div class="inventario-categoria">Categoría de Usuario:</div>
+            
+            <div class="inventario-categoria">Telefono:</div>
+
+            <div class="inventario-categoria"></div>
+
+            <div class="inventario-categoria"></div>
+        </div>
+
+        <div class="barrainventario">
+        <% users.forEach(function(users){%>
+
+        <div class="contenedor-iventario3">
+            
+            <div class="inventario-subcategoria"><%=users.firstname%></div>
+
+            <div class="inventario-subcategoria"> <%=users.lastname%></div>
+
+            <div class="inventario-subcategoria"> <%=users.email%></div>
+
+            <%if(users.userCategory_id==1){%>
+
+            <div class="inventario-subcategoria">Usuario</div>
+            <%}%>
+
+            <%if(users.userCategory_id==1==2){%>
+
+            <div class="inventario-subcategoria">Administrador</div>
+            <%}%>
+
+            <div class="inventario-subcategoria"> <%=users.phone%></div>
+
+            <div class="inventario-editar"><a href="/users/<%=users.id%>/edit">Editar</a></div>
+
+            <div class="inventario-borrar"> <a href="">Borrar</a></div>
+
+            
+            
+            
+        </div>
+        <%})%>
+        </div>
+
+
+    </div>
+
+    </div>
+    
+        
+            
+    
+
+</body>
+</html>

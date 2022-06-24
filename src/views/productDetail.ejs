@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ------Inicio de head----------- -->
+
+<%- include("./partials/head") %>
+
+<!-- ----Fin del Head------- -->
+
+<style>.container {padding-right: 20px;padding-left: 20px;}</style>;
+
+<!-- Body Start-->
+<body>
+  <!-- Comienzo del Header -->
+  
+  <%- include("./partials/header") %>
+<!-- Fin del Header -->
+
+<!-- Jumbotron -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12"><h1>Producto</h1></div>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron End -->
+
+<!-- Blog-single Section Start -->
+    <section class="single">
+        <div class="container">
+           <div class="inner-content">
+            <h2 class="myh2"><%= product.name %></h2>
+               <div class="row">
+                <div class="col-sm-12 col-md-8 slider-sec" data-aos="fade-up">
+                    <!-- main slider carousel -->
+
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active" data-slide-number="0">
+                                <img src="/images/productos/<%= product.imagen%>" alt="image" class="img-thumbnail img-responsive img-fluid w549">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="/images/productos/descuentoRC.jpg" alt="image" class="img-thumbnail img-responsive img-fluid w549">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="../../images/productos/descuentoGalicia.jpg" class="img-thumbnail img-responsive img-fluid w549">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="3">
+                                <img src="../../images/productos/descuentoMP.jpg" alt="image" class="img-thumbnail img-responsive img-fluid w549">
+                            </div>
+                        </div>
+                        <!-- main slider carousel nav controls -->
+                            
+                        <ul class="carousel-indicators list-inline">
+                            <li class="list-inline-item active">
+                                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
+                                    <img src="../../images/productos/descuentoRC.jpg" alt="image" class="img-thumbnail img-responsive w98">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
+                                    <img src="../../images/productos/descuentoGalicia.jpg" alt="image" class="img-thumbnail img-responsive w98">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">
+                                    <img src="../../images/productos/descuentoMP.jpg" alt="image" class="img-thumbnail img-responsive w98">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-3" data-slide-to="3" data-target="#myCarousel">
+                                    <img src="../../images/productos/descuentoBBVA.png" alt="image" class="img-thumbnail img-responsive w98">
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!--/main slider carousel-->
+                </div>
+                <div class="col-sm-12 col-md-4 slider-content">
+                    <p class="myp" data-aos="fade-up">
+                       <%= product.description %> 
+                    </p>
+                <div class="row myrow">
+                   <div class="col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                    <ul>
+                      <li class="mylist">
+                        <span class="myspan">Precio Antes</span>
+                        <span class="myspan">:</span>
+                        <span class="myspan">
+                          <% var precio = product.price; %>
+                          <% var descuento = 1000; %>
+                          <% var total = [precio + descuento]; %>
+                          <% if (product.price) {
+                             %> 
+                          <p> <%= total %> </p>
+                          <% } %></span>
+                    </li>
+                        <li class="mylist1">
+                            <span class="myspan1">Ahora<% product.categoryMascotas_id%> </span>&nbsp;&nbsp;
+                            <span class="myspan1">:</span>&nbsp;&nbsp;
+                            <span class="myspan1"><%= product.price %></span>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="col-sm-12">
+                    <div class="cart" data-aos="fade-up" data-aos-duration="1500">
+                        <a href="../productCart" class="btn btn-info" role="button">Comprar</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>;
+<!-- Blog-single Section end -->
+    <section class="review">
+        <div class="container">
+           <div class="inner-content">
+            <div class="row myrow1">
+                <div class="col-md-12">
+                    <div class="myreview"  data-aos="fade-up">
+                        <h2>Reseña</h2>
+                        <div class="review-content">
+                            <h6>Laura Lopez&nbsp;/
+                                <span>12.06.2022</span>
+                            </h6>
+                            <p>Guau!  realmente este producto es increible!</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12" data-aos="fade-up">
+                    <h2>Escribe una reseña</h2>
+                   <form class="form-horizontal"
+                   action="..#"
+                   method="POST"
+                   enctype="multipart/form-data"
+               >            
+                       <fieldset>
+                           <div class="form-group">
+                               <div class="col-sm-4">
+                                   <input class="form-control" placeholder="Nombre" required="true" size="30" type="text" />
+                               </div>
+                               <div class="col-sm-4">
+                                   <input class="form-control" placeholder="Email" required="true" size="30" type="text" />
+                               </div>
+                               <div class="col-sm-4">
+                                   <input class="form-control" placeholder="Tu sitio" required="true" size="30" type="text" />
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <div class="col-sm-12">
+                                   <textarea class="form-control" placeholder="Mensaje" required="true" rows="7"></textarea>
+                               </div>
+                           </div>
+                           <div class="col-sm-12 form-group">
+                             <button class="btn btn-default pull-left" type="submit">Enviar</button>
+                           </div>
+                       </fieldset>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Blog-single Section End -->
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+   <div class="row">
+    <div class="inner-content">
+     <div class="col-sm-6"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+      <h2 class="left">Contacto</h2>
+       <form action="https://formspree.io/f/xeqnvjzr"
+       method="POST">
+       <div class="row">
+         <div class="col-sm-6 form-group">
+           <input class="form-control" name="nombre" placeholder="Nombre" type="text" required>
+         </div>
+         <div class="col-sm-6 form-group">
+           <input class="form-control" name="_replyto" placeholder="Email" type="email" required>
+         </div>
+       </div>
+       <textarea class="form-control" name="message" placeholder="Comentario" rows="8"></textarea><br>
+       <div class="row">
+         <div class="col-sm-12 form-group">
+           <button class="btn btn-default pull-left" type="submit">Enviar</button>
+         </div>
+       </div> 
+       </form>
+     </div>
+     <div class="col-sm-5 address"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+       <h2>¿Como podemos ayudarte?</h2>
+       <p>Dejanos tu duda o inquietud y a la brevedad nuestro equipo la procesara y te brindara una solucion via E-mail <br> Atentamente Grupo 4</p>
+       <ul class="social-icon">
+          <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+       </ul>
+     </div>
+   </div>
+   </div>
+     </div>
+ 
+     <!--footer-->
+    <%- include("./partials/footer") %>
+
+    <!-- Fin del Footer -->
+
+</section>
+<!-- Contact Section End -->
+   
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>;
+    <!-- js -->
+    <script src="/js/animate.js"></script>;
+    <script src="/js/bootstrap.min.js"></script>;
+    <script src="/js/custom.js"></script>;
+    </body>
+  <!-- Body Ended -->
+</html>
+
